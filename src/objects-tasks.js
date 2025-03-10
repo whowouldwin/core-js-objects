@@ -403,7 +403,7 @@ class CssSelector {
     this.checkOrder('element', 1);
     if (this.selector.element) {
       throw new Error(
-        'Element, id and pseudo-element should not occur more then one time'
+        'Element, id and pseudo-element should not occur more then one time inside the selector'
       );
     }
     this.selector.element = value;
@@ -414,7 +414,7 @@ class CssSelector {
     this.checkOrder('id', 2);
     if (this.selector.id) {
       throw new Error(
-        'Element, id and pseudo-element should not occur more then one time'
+        'Element, id and pseudo-element should not occur more then one time inside the selector'
       );
     }
     this.selector.id = `#${value}`;
@@ -443,7 +443,7 @@ class CssSelector {
     this.checkOrder('pseudoElement', 6);
     if (this.selector.pseudoElement) {
       throw new Error(
-        'Element, id and pseudo-element should not occur more then one time'
+        'Element, id and pseudo-element should not occur more then one time inside the selector'
       );
     }
     this.selector.pseudoElement = `::${value}`;
